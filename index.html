@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div class="brandText">
+        <div class="title">Glam Doll Generator</div>
+        <div class="sub">Hot Pink x Lime Edition • Custom boxes under every section • A/B/C prompts</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="search" class="search" placeholder="Search sections/options… (locs, Air Max, Chanel, leopard)" />
+      <div class="row">
+        <button class="btn ghost" id="btnReset">Reset</button>
+        <button class="btn ghost" id="btnClear">Clear All</button>
+        <button class="btn" id="btnRandom3">Randomize 3 (A/B/C)</button>
+      </div>
+      <div class="row meta">
+        <span class="pill" id="sectionCount">0 sections</span>
+        <span class="pill lime" id="comboCount">300+ combos</span>
+        <span class="pill toast" id="toast"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel">
+      <div class="panelHead">
+        <div>
+          <div class="panelTitle">Sections</div>
+          <div class="panelHint">Tap chips to select. Add details in the custom box under each section.</div>
+        </div>
+      </div>
+
+      <!-- THIS IS REQUIRED OR SECTIONS WON'T SHOW -->
+      <div id="sections" class="sections"></div>
+    </section>
+
+    <aside class="side">
+      <div class="card">
+        <div class="cardTitle">Presets</div>
+        <div class="cardBtns">
+          <button class="btn small" id="presetA">Preset A</button>
+          <button class="btn small" id="presetB">Preset B</button>
+          <button class="btn small" id="presetC">Preset C</button>
+        </div>
+        <div class="cardHint">
+          Presets load into selections. Randomize 3 generates three different prompts A/B/C.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Viral polish checklist</div>
+        <div class="cardHint">
+          Use: glossy skin + sparkle lighting + luxury bag + stacked jewelry + attitude expression.
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- BUILDER + OUTPUTS (BOTTOM ON PURPOSE) -->
+  <footer class="builder" id="builder">
+    <div class="builderHead">
+      <div>
+        <div class="builderTitle">Builder (Bottom)</div>
+        <div class="builderSub">Build updates A/B/C. Copy buttons copy instantly.</div>
+      </div>
+      <div class="builderBtns">
+        <button class="btn ghost" id="btnBuild">Build Prompts</button>
+        <button class="btn ghost" id="btnLoadA">Load A</button>
+        <button class="btn ghost" id="btnLoadB">Load B</button>
+        <button class="btn ghost" id="btnLoadC">Load C</button>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <label class="field">
+        <span>Character name</span>
+        <input id="charName" placeholder='ex: Bree' />
+      </label>
+
+      <label class="field">
+        <span>Nameplate text</span>
+        <input id="nameplate" placeholder='ex: "QUEEN", "Vonetta"' />
+      </label>
+
+      <label class="field">
+        <span>Text sticker template (optional)</span>
+        <input id="textSticker" placeholder='ex: "Boss Energy" (only if you want text)' />
+      </label>
+
+      <label class="field">
+        <span>Custom colors</span>
+        <input id="customColors" placeholder="ex: hot pink + lime accents, gold hardware" />
+      </label>
+
+      <label class="field">
+        <span>Custom bag notes</span>
+        <input id="customBag" placeholder='ex: quilted chain strap, heart charm' />
+      </label>
+
+      <label class="field">
+        <span>Custom shoe colorway</span>
+        <input id="customShoeColorway" placeholder='ex: metallic gold/white, lime neon, zebra print' />
+      </label>
+
+      <label class="field full">
+        <span>Extra notes</span>
+        <input id="extraNotes" placeholder="Anything else..." />
+      </label>
+    </div>
+
+    <div class="outputs">
+      <div class="outCard">
+        <div class="outHead">
+          <div class="outTitle">Prompt A</div>
+          <button class="btn small" id="copyA">Copy A</button>
+        </div>
+        <textarea id="outA" spellcheck="false"></textarea>
+      </div>
+
+      <div class="outCard">
+        <div class="outHead">
+          <div class="outTitle">Prompt B</div>
+          <button class="btn small" id="copyB">Copy B</button>
+        </div>
+        <textarea id="outB" spellcheck="false"></textarea>
+      </div>
+
+      <div class="outCard">
+        <div class="outHead">
+          <div class="outTitle">Prompt C</div>
+          <button class="btn small" id="copyC">Copy C</button>
+        </div>
+        <textarea id="outC" spellcheck="false"></textarea>
+      </div>
+    </div>
+  </footer>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
